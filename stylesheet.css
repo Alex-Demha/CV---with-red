@@ -198,16 +198,18 @@ header{
     }
 }
 .avatar{
+    border: 0px solid #ef233c;
     border-radius: 50%;
     height: 200px;
     width: 250px;
     margin: auto;
     transform: scale(0.95);
-    transition: transform .2s ease;
+    transition: transform .2s ease, border .4s ease-in;
 }
 
 .avatar:hover{
     transform: scale(1);
+   
 }
 
 .btn{
@@ -333,7 +335,6 @@ header{
 /*******************************************************************************************************/
 /* Cards */
 
-
 .header{
     text-align: center;
     text-transform: capitalize;
@@ -351,6 +352,7 @@ img{
     transform: scale(1.03);
     width: 100%;
     height: 100%;
+    filter: brightness(120%);
     transition: filter .3s linear, transform .3s ease;
 }
 
@@ -475,9 +477,14 @@ input{
     border-radius: 1000px;
     border: 1px solid #999;
     padding: 3px 3px 3px 40px;
-    margin: 20px 0;
+    margin: 5px 0;
     width: 14em;
     outline:none;
+    transition: border .3s ease-out;
+}
+
+#email{
+    margin-top: 10%;
 }
 
 input:hover{
@@ -501,9 +508,10 @@ textarea:focus{
 
 .input-icon{
     position: relative;
-    bottom: 3em;
+    bottom: 33px;
     left: 12px;
     color:#ef233c;
+    
 }
 
 .contact-title{
@@ -522,18 +530,18 @@ textarea:focus{
     }
 
     input{
-        margin: 15px auto;
+        margin: 5px auto;
     }
 
     .input-icon{
         position: relative;
-        left: -5.5em;
-        bottom: 2.7em;
+        left: -5.7em;
+        bottom: 2.1em;
         color:#ef233c;
     }
 
     textarea{
-        margin: 20px auto;
+        margin: 15px auto;
         width: 60%;
     }
 }

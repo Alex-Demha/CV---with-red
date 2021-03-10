@@ -25,3 +25,4 @@ function reveal(){
         reveals[i].classList.remove('revealed');
     }
 }
+
