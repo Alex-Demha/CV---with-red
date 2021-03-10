@@ -9,9 +9,8 @@ html{
 }
 
 body{
-    background-color: #ced2da;
-    padding-top: 3.5em; 
-    height: 50%;
+    background-color: #d6d8dd;
+   
 }
 
 h1{
@@ -36,7 +35,7 @@ header{
     align-items: center;
     height: 3.5em;
     z-index: 100;
-    transition: background-color .2s linear;
+    transition: background-color .4s linear;
 }
 .scrolled{
     background-color: #ef233c;
@@ -46,7 +45,7 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    transition: transform .4s ease;
+    transition: transform .5s ease-out;
 }
 
 .nb-logo{
@@ -66,7 +65,6 @@ header{
  .nb-li{
     margin: 0 5px;
     list-style: none;
-    transition: border-bottom .3s ease-in-out;
 }
 
  .nb-li a::after {
@@ -185,11 +183,10 @@ header{
 
 .container-top{
     position: relative;
-    top: -3.5em;
     background-image: url('Assets/Red.jpg');
     background-size: cover;
-    filter: brightness(90%);
-    color: #edf2f4;
+    background-position: center;
+    color: white;
     height: 440px;
     padding: 30px 20px 0 20px;
     text-align: center;
@@ -219,13 +216,13 @@ header{
     width: 10em;
     white-space: nowrap;
     border: none;
-    background-color: #ddd;
-    color: #333;
+    background-color: #ef233c;
+    color: #fff;
 }
 
 .btn:hover{
-    background-color: #bbb;
-    color: #222;
+    background-color: #5a181e;
+    color: #ccc;
 }
 
 .logo-ul{
@@ -265,15 +262,18 @@ header{
     background-color: #5a181e;
 }
 
+.logo-ul .logo-li .logo-a:hover{
+    color: #ccc;
+}
+
 
 /***********************************************************************************************************/
 /*info and skills*/
 .container{
-
     padding: 30px;
-    background-color: #edf2f4;
-    border-radius: 4px;
-    box-shadow: 0 0 3px #4b151921;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #4e101446;
     margin-bottom: 50px;
     opacity: 0;
     transform: translateY(100px);
@@ -394,7 +394,7 @@ img{
 /********************************************************************************************************************/
 /*Portofolio*/
 
-.container-portofolio{
+.portofolio-container{
     position: relative;
     display: flex;
     border-radius: 0;
@@ -427,6 +427,113 @@ img{
     text-align: center;
 }
 
+@media (max-width: 577px){
+    .portofolio-container{
+        padding: 0;
+        flex-direction: column;
+        width: 95%;
+        height: 110%;
+    }
+
+    .portofolio-title{
+        position: relative;
+        width: 100%;
+        height: 8em;
+        border-right: none;
+        border-bottom: 2px solid #4b1519;
+    }
+
+    .portofolio-description{
+        padding: 30px 0 20px 0;
+        top: 0;
+        left:20%;
+    }
+}
+/******************************************************************************************************************/
+/*Contact*/
+.contact-container{
+    width: 60%;
+    height: 100%;
+}
+
+.contact-button{
+    background-color: #ef233c;
+    color: #fff
+}
+
+.contact-button:hover{
+    background-color: #7e232b;
+    color: #fff;
+}
+.contact-inputs{
+    display: block;
+    margin-bottom:  20px;
+}
+
+input{
+    display: block;
+    border-radius: 1000px;
+    border: 1px solid #999;
+    padding: 3px 3px 3px 40px;
+    margin: 20px 0;
+    width: 14em;
+    outline:none;
+}
+
+input:hover{
+    border: 1px solid #ef233c;
+    outline:none;
+}
+
+textarea{
+    display: block;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline:none;
+    margin-bottom: 20px;
+}
+
+textarea:focus{
+    border-bottom: 1px solid #ef233c;
+}
 
 
+.input-icon{
+    position: relative;
+    bottom: 3em;
+    left: 12px;
+    color:#ef233c;
+}
 
+.contact-title{
+    font-size:  24px;
+    margin-top: 30px;
+}
+
+.contact-info{
+    font-size: 18px;
+}
+
+@media (max-width: 991px){
+    .contact-container{
+        width: 100%;
+        text-align: center;
+    }
+
+    input{
+        margin: 15px auto;
+    }
+
+    .input-icon{
+        position: relative;
+        left: -5.5em;
+        bottom: 2.7em;
+        color:#ef233c;
+    }
+
+    textarea{
+        margin: 20px auto;
+        width: 60%;
+    }
+}

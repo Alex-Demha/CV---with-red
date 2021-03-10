@@ -19,7 +19,7 @@ function reveal(){
     {
         var windowHeight = window.innerHeight;
         var revealTop = reveals[i].getBoundingClientRect().y;
-        if(revealTop < windowHeight - 110)
+        if(revealTop < windowHeight - 90)
         reveals[i].classList.add('revealed');
         else
         reveals[i].classList.remove('revealed');
